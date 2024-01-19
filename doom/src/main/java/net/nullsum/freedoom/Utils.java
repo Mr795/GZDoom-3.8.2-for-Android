@@ -103,6 +103,12 @@ public class Utils {
         }
     }
 
+    tester = new File( fullModDir + "/" + "zdextra.pk3");
+        if (!tester.exists()) {
+            Utils.copyAsset(responsibleActivity, "zdextra.pk3", fullModDir);
+        }
+    }
+
     private static void copyFile(InputStream in, OutputStream out) throws IOException {
         byte[] buffer = new byte[1024];
         int read;
